@@ -1,23 +1,14 @@
 <?php
+function conectarDB() {
+    $dsn = "pgsql:host=dpg-ctq6ofqj1k6c739pn1ng-a;port=5432;dbname=dbcontacto;";
+    $user = "dbcontacto_user";
+    $password = "NmmS5wypyPKhdSZPkQCnPk4hb6toH1SJ";
 
-
-function conectarDB() : Mysqli{
-
-    // cargando las credenciales desde las varaibles del entorno
-
-    $host =getenv('DB_HOST') ?: 'dpg-ctq6ofqj1k6c739pn1ng-a';
-    $user = getenv('DB_USER') ?: 'dbcontacto_user';
-    $password = getenv('DB_PASSWORD') ?: 'NmmS5wypyPKhdSZPkQCnPk4hb6toH1SJ';
-    $database = getenv('DB_NAME') ?: 'dbcontacto';
-
-    $db= new mysqli( $host, $user , $password ,  $database);
-
-    if(!$db){
-        die( "Error no se puede conectar". $db->connect_error);
-     
+    try {
+        $db = new PDO($dsn, $user, $password);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $db;
+    } catch (PDOException $e) {
+        die("Error al conectar a la base de datos: " . $e->getMessage());
     }
-
-    return $db;
-
-
 }
