@@ -25,3 +25,5 @@ EXPOSE 10000
 
 # Inicia el servidor PHP
 CMD ["php", "-S", "0.0.0.0:10000", "-t", "/app"]
+
+RUN docker-php-ext-install pdo_pgsql
