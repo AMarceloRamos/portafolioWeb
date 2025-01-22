@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
    } 
  
 }
-mysqli_close($db);
+$pdo = null; // Liberar la conexión manualmente, aunque no es obligatorio
 include '../template/header.php';
 
 ?>
