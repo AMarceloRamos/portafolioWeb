@@ -4,6 +4,9 @@ FROM php:8.1-cli
 # Establece el directorio de trabajo
 WORKDIR /app
 
+# Crea el directorio de trabajo explícitamente
+RUN mkdir -p /app
+
 # Instala Composer globalmente
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
