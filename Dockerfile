@@ -21,7 +21,8 @@ RUN apt-get update && apt-get install -y \
 RUN composer install --no-dev --prefer-dist --optimize-autoloader
 
 # Expone el puerto para Render
-EXPOSE 10000
+# Expone el puerto dinámico
+EXPOSE $PORT
 
 # Inicia el servidor PHP
 CMD ["php", "-S", "0.0.0.0:10000", "-t", "/app"]
@@ -37,4 +38,5 @@ RUN apt-get update && apt-get install -y \
 
 # Limpia los archivos de instalación para mantener la imagen ligera
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
+# Inicia el servidor PHP
+CMD ["php", "-S", "0.0.0.0:$PORT", "-t", "/app"]
