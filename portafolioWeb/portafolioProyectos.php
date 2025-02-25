@@ -1,15 +1,13 @@
 <?php 
 
-require 'include/config/databaseProyectos.php'; 
 
-$dbpr = conectarProyectos();
 
-if (!$dbpr) {
+if (!$db) {
     die("Error de conexión: " . mysqli_connect_error());
 }
 
 $sql = "SELECT id, titulo, intro, categoria, imgPortda FROM proyectos";
-$resultado = mysqli_query($dbpr, $sql);
+$resultado = mysqli_query($db, $sql);
 
 if (!$resultado) {
     die("Error en la consulta SQL: " . $dbpr->error);
