@@ -1,16 +1,14 @@
 <?php 
 
-
-
 if (!$db) {
-    die("Error de conexión: " . mysqli_connect_error());
+    die("Error de conexión: " . pg_last_error());
 }
 
 $sql = "SELECT id, titulo, intro, categoria, imgPortda FROM proyectos";
-$resultado = mysqli_query($db, $sql);
+$resultado = pg_query($db, $sql);
 
 if (!$resultado) {
-    die("Error en la consulta SQL: " . $dbpr->error);
+    die("Error en la consulta SQL: " . pg_last_error($db));
 }
 
 ?>
