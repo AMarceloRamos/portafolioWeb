@@ -111,7 +111,7 @@ include 'template/header.php';
 <!-- Portfolio Section -->
 
 <?php 
-        include 'portafolio.php';
+        include 'portafolioProyectos.php';
      ?>
 
 
