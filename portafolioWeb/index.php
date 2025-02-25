@@ -1,5 +1,7 @@
 <?php  
 
+<?php 
+
 require 'include/config/database.php';
 
 $db = conectarDB();
@@ -9,71 +11,70 @@ $email = '';
 $telefono = '';
 $mensaje = '';
 
-
-
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    //trim(limpia los espacio vacios al inicio y la final de los datos ingresados).
-
-    $nombre = filter_var(trim($_POST['nombre'] ?? ''), FILTER_SANITIZE_STRING);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Limpieza de datos de entrada
+    $nombre = pg_escape_string($db, trim($_POST['nombre'] ?? ''));
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $telefono = filter_var(trim($_POST['telefono'] ?? ''), FILTER_SANITIZE_STRING);
-    $mensaje = filter_var(trim($_POST['mensaje'] ?? ''), FILTER_SANITIZE_STRING);
+    $telefono = pg_escape_string($db, trim($_POST['telefono'] ?? ''));
+    $mensaje = pg_escape_string($db, trim($_POST['mensaje'] ?? ''));
 
-    // un arreglo de errores
-
+    // Validaciones
     $errores = [];
 
-    // Validamos maximo de carácteres
-
-    if(strlen($nombre)> 50){
-        $errores[]="El nombre no puede contener mas de 100 caracteres";
+    if (strlen($nombre) > 50) {
+        $errores[] = "El nombre no puede contener más de 50 caracteres";
     }
 
-    if(strlen($email) > 50){
-        $errores[]= "El correo no puede tener mas de 250 caracteres";
-    }
-    if(strlen($telefono)> 11){
-        $errores[] = "El teléfono no puede tener mas de 11 números";
+    if (strlen($email) > 250) {
+        $errores[] = "El correo no puede tener más de 250 caracteres";
     }
 
-    if(strlen($mensaje) > 150){
-        $errores[] ="El mensaje no puede tener mas de 49 carácteres";
+    if (strlen($telefono) > 11) {
+        $errores[] = "El teléfono no puede tener más de 11 números";
     }
-    //Validamos cada campo
 
-     if(empty($nombre)){
-        $errores[] = "El campo nombre no puede estar vacio";
-     }
+    if (strlen($mensaje) > 150) {
+        $errores[] = "El mensaje no puede tener más de 150 caracteres";
+    }
 
-     if(empty($email)){
-        $errores[] = "El campo email no puede estar vacio ";
-     }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $errores[] ="El email no tiene formato válido";
-     }
+    if (empty($nombre)) {
+        $errores[] = "El campo nombre no puede estar vacío";
+    }
 
-     if(empty($telefono)){
-        $errores[] = "El campo telefono no puede estar vacio";
-     }
+    if (empty($email)) {
+        $errores[] = "El campo email no puede estar vacío";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errores[] = "El email no tiene formato válido";
+    }
 
-     if(empty($mensaje)){
-        $errores[] = "El campo mensaje no puede estar vacio";
-     }
+    if (empty($telefono)) {
+        $errores[] = "El campo teléfono no puede estar vacío";
+    }
 
-     if(empty($errores)){
+    if (empty($mensaje)) {
+        $errores[] = "El campo mensaje no puede estar vacío";
+    }
 
-        $query = "INSERT INTO contactoPortafolio(nombre, email, telefono, mensaje) VALUES('$nombre','$email', '$telefono', '$mensaje' )";
+    // Si no hay errores, insertar en la base de datos
+    if (empty($errores)) {
+        $query = "INSERT INTO contactoPortafolio (nombre, email, telefono, mensaje) 
+                  VALUES ('$nombre', '$email', '$telefono', '$mensaje')";
 
-       $resultado = mysqli_query($db, $query);
-       
-   
-   // Redirigir usando PRG para evitar reenvíos
-   header("Location: " . $_SERVER['PHP_SELF'] . "#contact");
-   exit; 
-   } 
- 
+        $resultado = pg_query($db, $query);
+
+        if ($resultado) {
+            // Redirigir usando PRG para evitar reenvíos
+            header("Location: " . $_SERVER['PHP_SELF'] . "#contact");
+            exit;
+        } else {
+            $errores[] = "Error al guardar el mensaje en la base de datos.";
+        }
+    }
 }
-mysqli_close($db);
+
+pg_close($db);
 include 'template/header.php';
+
 
 ?>
 
