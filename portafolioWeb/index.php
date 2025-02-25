@@ -1,7 +1,4 @@
 <?php  
-
-<?php 
-
 require 'include/config/database.php';
 
 $db = conectarDB();
