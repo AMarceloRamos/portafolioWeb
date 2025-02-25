@@ -1,14 +1,16 @@
-# Usa una imagen base de PHP con Apache
+# Usa la imagen base de PHP con Apache (o la que estés usando)
 FROM php:8.2-apache
 
-# Habilita las extensiones necesarias
-RUN docker-php-ext-install pdo pdo_pgsql
+# Actualiza los paquetes e instala dependencias necesarias para PostgreSQL
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
 
-# Copia tus archivos del proyecto al contenedor
-COPY . /var/www/html/
+# Copia los archivos de tu proyecto al contenedor
+COPY . /var/www/html
 
-# Expone el puerto 80
+# Exponer el puerto 80 para el servidor web
 EXPOSE 80
 
-# Inicia Apache
+# Comando de inicio del contenedor
 CMD ["apache2-foreground"]
