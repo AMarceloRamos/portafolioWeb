@@ -1,7 +1,7 @@
 <?php
 
 function conectarDB(): PDO {
-    $host = getenv('DB_HOST') ?: 'ping dpg-cur1vpdds78s7384bkr0-a';
+    $host = getenv('DB_HOST') ?: '"host.docker.internal"';
     $port = getenv('DB_PORT') ?: '5432'; 
     $dbname = getenv('DB_NAME') ?: 'contactodb_i7hi';
     $user = getenv('DB_USER') ?: 'contactodb_i7hi_user';
