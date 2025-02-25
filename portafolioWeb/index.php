@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
      if(empty($errores)){
 
-        $query = "INSERT INTO form_contacto(nombre, email, telefono, mensaje) VALUES('$nombre','$email', '$telefono', '$mensaje' )";
+        $query = "INSERT INTO contactoPortafolio(nombre, email, telefono, mensaje) VALUES('$nombre','$email', '$telefono', '$mensaje' )";
 
        $resultado = mysqli_query($db, $query);
        
