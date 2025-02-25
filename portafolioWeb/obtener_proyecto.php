@@ -1,6 +1,6 @@
 <?php 
 
-require 'include/config/databaseProyectos.php';
+require 'include/config/database.php;
 
 $dbpr = conectarProyectos();
 
