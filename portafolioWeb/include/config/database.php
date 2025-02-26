@@ -7,6 +7,10 @@ $dbname = 'contactodb_i7hi';
 $user = 'contactodb_i7hi_user';
 $password = '1BesM5VW4iwl5rdJP9IXqNwETiKW9hA0';
 
+       if (!$host || !$port || !$dbname || !$user || !$password) {
+        die("Error: No se pudieron cargar las variables de entorno.");
+    }
+
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
 
 
