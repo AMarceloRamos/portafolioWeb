@@ -1,7 +1,7 @@
 <?php
 
 function conectarDB(): PDO {
-$host = 'dpg-cur1vpdds78s7384bkr0-a.render.com';  // Asegúrate de que Render usa este dominio
+$host = 'dpg-cur1vpdds78s7384bkr0-a';  // Asegúrate de que Render usa este dominio
 $port = '5432'; 
 $dbname = 'contactodb_i7hi';
 $user = 'contactodb_i7hi_user';
