@@ -1,13 +1,14 @@
 <?php
 
 function conectarDB(): PDO {
-    $host = getenv('DB_HOST') ?: 'dpg-cur1vpdds78s7384bkr0-a';
-    $port = getenv('DB_PORT') ?: '5432'; 
-    $dbname = getenv('DB_NAME') ?: 'contactodb_i7hi';
-    $user = getenv('DB_USER') ?: 'contactodb_i7hi_user';
-    $password = getenv('DB_PASSWORD') ?: '1BesM5VW4iwl5rdJP9IXqNwETiKW9hA0';
+$host = 'dpg-cur1vpdds78s7384bkr0-a.render.com';  // Asegúrate de que Render usa este dominio
+$port = '5432'; 
+$dbname = 'contactodb_i7hi';
+$user = 'contactodb_i7hi_user';
+$password = '1BesM5VW4iwl5rdJP9IXqNwETiKW9hA0';
 
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+$dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+
 
     try {
         $db = new PDO($dsn, $user, $password, [
