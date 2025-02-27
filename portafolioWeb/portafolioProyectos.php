@@ -20,13 +20,6 @@ if (!$resultado) {
 // Obtener los resultados como un array asociativo
 $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-// Muestra los datos (solo para probar)
-foreach ($proyectos as $proyecto) {
-    echo "<h2>" . htmlspecialchars($proyecto['titulo']) . "</h2>";
-    echo "<p>" . htmlspecialchars($proyecto['intro']) . "</p>";
-    echo "<p>Categoría: " . htmlspecialchars($proyecto['categoria']) . "</p>";
-    echo "<img src='" . htmlspecialchars($proyecto['imgPortda']) . "' alt='Imagen'>";
-}
 
 ?>
 
