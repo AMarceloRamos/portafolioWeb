@@ -1,29 +1,32 @@
 <?php
 
 require 'include/config/database.php';
-// Conectar a la base de datos
-$db = conectarDB();
+
+$db = conectarDB(); // Llama a la función que devuelve un objeto PDO
 
 if (!$db) {
-    die("Error de conexión: " . pg_last_error());
+    die("Error de conexión a la base de datos.");
 }
 
-// Consulta SQL
-$sql = "SELECT id, titulo, intro, categoria, imgportada FROM proyectos";
-$resultado = pg_query($db, $sql);
+$sql = "SELECT id, titulo, intro, categoria, imgPortda FROM proyectos";
+
+// Usa query() en lugar de pg_query()
+$resultado = $db->query($sql);
 
 if (!$resultado) {
-    die("Error en la consulta SQL: " . pg_last_error($db));
+    die("Error en la consulta SQL.");
 }
 
-// Obtener los resultados en un array asociativo
-$proyectos = pg_fetch_all($resultado);
+// Obtener los resultados como un array asociativo
+$proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-// Cerrar la conexión
-pg_close($db);
-
-
-
+// Muestra los datos (solo para probar)
+foreach ($proyectos as $proyecto) {
+    echo "<h2>" . htmlspecialchars($proyecto['titulo']) . "</h2>";
+    echo "<p>" . htmlspecialchars($proyecto['intro']) . "</p>";
+    echo "<p>Categoría: " . htmlspecialchars($proyecto['categoria']) . "</p>";
+    echo "<img src='" . htmlspecialchars($proyecto['imgPortda']) . "' alt='Imagen'>";
+}
 
 ?>
 
