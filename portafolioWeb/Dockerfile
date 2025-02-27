@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
 # Copia los archivos de tu proyecto al contenedor
 COPY . /var/www/html
 
+# Asignar los permisos adecuados
+RUN chown -R www-data:www-data /var/www/html
 # Exponer el puerto 80 para el servidor web
 EXPOSE 80
 
