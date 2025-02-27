@@ -8,7 +8,7 @@ if (!$db) {
     die("Error de conexión a la base de datos.");
 }
 
-$sql = "SELECT id, titulo, intro, categoria, imgPortda FROM proyectos";
+$sql = "SELECT id, titulo, intro, categoria, imgportda FROM proyectos";
 
 // Usa query() en lugar de pg_query()
 $resultado = $db->query($sql);
