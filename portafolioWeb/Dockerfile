@@ -1,18 +1,22 @@
-# Usa la imagen base de PHP con Apache (o la que estés usando)
+# Usa la imagen oficial de PHP con Apache
 FROM php:8.2-apache
 
-# Actualiza los paquetes e instala dependencias necesarias para PostgreSQL
+# Instala PostgreSQL y extensiones de PHP necesarias
 RUN apt-get update && apt-get install -y \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_pgsql
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Copia los archivos de tu proyecto al contenedor
-COPY . /var/www/html
+# Habilita los módulos de Apache (si usas Laravel o mod_rewrite)
+RUN a2enmod rewrite
 
-# Asignar los permisos adecuados
+# Copia los archivos de la aplicación
+COPY . /var/www/html/
+
+# Establece permisos
 RUN chown -R www-data:www-data /var/www/html
-# Exponer el puerto 80 para el servidor web
+
+# Expone el puerto 80
 EXPOSE 80
 
-# Comando de inicio del contenedor
+# Inicia Apache
 CMD ["apache2-foreground"]
