@@ -1,5 +1,6 @@
 <?php 
 
+$db = conectarDB();
 if (!$db) {
     die("Error de conexión: " . pg_last_error());
 }
