@@ -1,16 +1,29 @@
 <?php 
 
+<?php
+// Conectar a la base de datos
 $db = conectarDB();
+
 if (!$db) {
     die("Error de conexión: " . pg_last_error());
 }
 
-$sql = "SELECT id, titulo, intro, categoria, imgPortda FROM proyectos";
+// Consulta SQL
+$sql = "SELECT id, titulo, intro, categoria, imgportada FROM proyectos";
 $resultado = pg_query($db, $sql);
 
 if (!$resultado) {
     die("Error en la consulta SQL: " . pg_last_error($db));
 }
+
+// Obtener los resultados en un array asociativo
+$proyectos = pg_fetch_all($resultado);
+
+// Cerrar la conexión
+pg_close($db);
+
+
+
 
 ?>
 
