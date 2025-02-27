@@ -1,18 +1,22 @@
 <?php
 
 function conectarDB(): PDO {
-$host = 'dpg-cur1vpdds78s7384bkr0-a';  // Asegúrate de que Render usa este dominio
-$port = '5432'; 
-$dbname = 'contactodb_i7hi';
-$user = 'contactodb_i7hi_user';
-$password = '1BesM5VW4iwl5rdJP9IXqNwETiKW9hA0';
+    $db_url = getenv('DATABASE_URL');  // Render asigna esta variable automáticamente
 
-       if (!$host || !$port || !$dbname || !$user || !$password) {
-        die("Error: No se pudieron cargar las variables de entorno.");
+    if (!$db_url) {
+        die("Error: No se encontró la variable de entorno DATABASE_URL.");
     }
 
-$dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+    // Parsear la URL de la base de datos
+    $db = parse_url($db_url);
 
+    $host = $db['host'];
+    $port = $db['port'];
+    $dbname = ltrim($db['path'], '/');
+    $user = $db['user'];
+    $password = $db['pass'];
+
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
 
     try {
         $db = new PDO($dsn, $user, $password, [
