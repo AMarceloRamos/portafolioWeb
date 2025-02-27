@@ -17,9 +17,6 @@ if (!$resultado) {
     die("Error en la consulta SQL.");
 }
 
-// Obtener los resultados como un array asociativo
-$proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>
 
