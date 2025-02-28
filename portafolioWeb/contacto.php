@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <span id="map-input">
 
                             José Miguel Carrera 679,<br>
-                            La Florida,Santiago</span>
+                            La Florida, Santiago</span>
                         <br>
                     </address>
                 </div>
