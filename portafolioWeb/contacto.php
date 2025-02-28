@@ -1,5 +1,5 @@
 <?php
-require 'include/config/database.php';
+//require 'include/config/database.php';
 
 //$db = conectarDB();
 
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-pg_close($db);
+//pg_close($db);
 ?>
 <section id="contact">
     <div class="container-fluid wrapper">
