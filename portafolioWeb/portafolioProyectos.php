@@ -10,17 +10,15 @@ if (!$db) {
 
 $sql = "SELECT id, titulo, intro, categoria, imgportda FROM proyectos";
 
-// Usa query() en lugar de pg_query()
+// Ejecuta la consulta
 $resultado = $db->query($sql);
 
 if (!$resultado) {
     die("Error en la consulta SQL.");
 }
 
-    // Obtener los resultados como un array asociativo
+// Obtener todos los resultados como un array asociativo
 $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
-
-
 
 ?>
 
@@ -41,10 +39,10 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 </ul>
             </div>
         </div>
-</div>
-<div class="portfolio-wrapper portfolio-container-fluid">
-<div class="portfolio-items">
-            <?php while ($proyecto = $resultado->fetch((PDO::FETCH_ASSOC)){ ?>
+    </div>
+    <div class="portfolio-wrapper portfolio-container-fluid">
+        <div class="portfolio-items">
+            <?php foreach ($proyectos as $proyecto) { ?>
                 <?php 
                     $categoria = strtolower(str_replace(' ', '', htmlspecialchars($proyecto['categoria']))); 
                 ?>
@@ -64,11 +62,12 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 </div>
             <?php } ?>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Modal -->
+<!-- Modales -->
+<?php foreach ($proyectos as $proyecto) { ?>
 <div class="portfolio-modal modal fade" id="portfolioModal<?= $proyecto['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -80,15 +79,13 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h2 id="modal-titulo"></h2>
-                        <p id="modal-intro" class="item-intro text-muted"></p>
-                        <img id="modal-imagen" class="img-responsive img-centered" src="" alt="Imagen del proyecto">
-                        <p id="modal-descripcion"></p>
-                        <p><strong>Más información:</strong> <a id="modal-url" href="" target="_blank">Ver proyecto</a></p>
+                        <h2><?= htmlspecialchars($proyecto['titulo']); ?></h2>
+                        <p class="item-intro text-muted"><?= htmlspecialchars($proyecto['intro']); ?></p>
+                        <img class="img-responsive img-centered" src="<?= htmlspecialchars($proyecto['imgportda']); ?>" alt="Imagen del proyecto">
+                        <p><?= htmlspecialchars($proyecto['intro']); ?></p>
+                        <p><strong>Más información:</strong> <a href="#" target="_blank">Ver proyecto</a></p>
                         <ul class="list-inline">
-                            <li><strong>Fecha:</strong> <span id="modal-fecha"></span></li>
-                            <li><strong>Cliente:</strong> <span id="modal-cliente"></span></li>
-                            <li><strong>Categoría:</strong> <span id="modal-categoria"></span></li>
+                            <li><strong>Categoría:</strong> <?= htmlspecialchars($proyecto['categoria']); ?></li>
                         </ul>
                         <button type="button" class="btn btn-xl" data-dismiss="modal">
                             <i class="fa fa-times"></i> Cerrar Proyecto
@@ -99,6 +96,7 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
+<?php } ?>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -119,7 +117,7 @@ $(document).ready(function () {
                 } else {
                     $("#modal-titulo").text(proyecto.titulo);
                     $("#modal-intro").text(proyecto.intro);
-                    $("#modal-imagen").attr("src", proyecto.imgPortda);
+                    $("#modal-imagen").attr("src", proyecto.imgportda);
                     $("#modal-descripcion").html(proyecto.descripcion);
                     $("#modal-url").attr("href", proyecto.url);
                     $("#modal-fecha").text(proyecto.fecha);
@@ -136,5 +134,3 @@ $(document).ready(function () {
     });
 });
 </script>
-
-
