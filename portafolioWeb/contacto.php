@@ -10,10 +10,10 @@ $mensaje = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Limpieza de datos de entrada
-    $nombre = pg_escape_string($db, trim($_POST['nombre'] ?? ''));
+    $nombre = $db->quote( trim($_POST['nombre'] ?? ''));
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $telefono = pg_escape_string($db, trim($_POST['telefono'] ?? ''));
-    $mensaje = pg_escape_string($db, trim($_POST['mensaje'] ?? ''));
+    $telefono =$db->quote( trim($_POST['telefono'] ?? ''));
+    $mensaje =$db->quote( trim($_POST['mensaje'] ?? ''));
 
     // Validaciones
     $errores = [];
