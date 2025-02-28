@@ -1,7 +1,7 @@
 <?php
 require 'include/config/database.php';
 
-$db = conectarDB();
+//$db = conectarDB();
 
 $nombre = '';
 $email = '';
