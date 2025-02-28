@@ -18,7 +18,7 @@ if (!$resultado) {
 }
 
     // Obtener los resultados como un array asociativo
-$proyectos = $resultado->fetch(PDO::FETCH_ASSOC);
+$proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -58,7 +58,7 @@ $proyectos = $resultado->fetch(PDO::FETCH_ASSOC);
                                     <div class="clearfix"></div>
                                     <i class="fa fa-plus"></i>
                                 </div>
-                                <img src="<?= htmlspecialchars($proyecto['imgPortda']); ?>" class="img-responsive" alt="portfolio-image">
+                                <img src="<?= htmlspecialchars($proyecto['imgportda']); ?>" class="img-responsive" alt="portfolio-image">
                             </a>
                         </div>
                     </div>
