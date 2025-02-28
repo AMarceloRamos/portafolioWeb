@@ -18,7 +18,7 @@ if (!$resultado) {
 }
 
     // Obtener los resultados como un array asociativo
-$proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
+$proyectos = $resultado->fetch(PDO::FETCH_ASSOC);
 
 
 
