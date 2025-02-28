@@ -57,7 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO contactoPortafolio (nombre, email, telefono, mensaje) 
                   VALUES ('$nombre', '$email', '$telefono', '$mensaje')";
 
-        $resultado = pg_query($db, $query);
+        $resultado = $db->prepare($query);
+        $resultado->execute([
+              ':nombre' =>$_POST['nombre'],   
+              ':email' =>$_POST['email'],
+              ':telefono' =>$_POST['telefono'],
+              ':mensaje' =>$_POST['mensaje']    
+        ]);
 
         if ($resultado) {
             // Redirigir usando PRG para evitar reenvíos
