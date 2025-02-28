@@ -44,7 +44,7 @@ $proyectos = $resultado->fetch(PDO::FETCH_ASSOC);
 </div>
 <div class="portfolio-wrapper portfolio-container-fluid">
 <div class="portfolio-items">
-            <?php while ($proyecto = $resultado->fetch_assoc()): ?>
+            <?php while ($proyecto = $resultado->fetch((PDO::FETCH_ASSOC)): ?>
                 <?php 
                     $categoria = strtolower(str_replace(' ', '', htmlspecialchars($proyecto['categoria']))); 
                 ?>
