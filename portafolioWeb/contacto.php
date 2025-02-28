@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Si no hay errores, insertar en la base de datos
     if (empty($errores)) {
         $query = "INSERT INTO contactoPortafolio (nombre, email, telefono, mensaje) 
-                  VALUES ('$nombre', '$email', '$telefono', '$mensaje')";
+                  VALUES (:nombre, :email, :telefono, :mensaje)";
 
         $resultado = $db->prepare($query);
         $resultado->execute([
