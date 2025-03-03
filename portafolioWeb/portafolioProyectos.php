@@ -8,7 +8,7 @@ if (!$db) {
     die("Error de conexión a la base de datos.");
 }
 
-$sql = "SELECT id, titulo, intro, categoria, imgportda FROM proyectos";
+$sql = "SELECT id, titulo, intro, categoria, imgportda, url FROM proyectos";
 
 // Ejecuta la consulta
 $resultado = $db->query($sql);
