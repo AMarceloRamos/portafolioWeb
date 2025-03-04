@@ -81,7 +81,7 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <div class="modal-body">
                         <h2><?= htmlspecialchars($proyecto['titulo']); ?></h2>
                         <p class="item-intro text-muted"><?= htmlspecialchars($proyecto['intro']); ?></p>
-                        <img class="img-responsive img-centered" src="<?= htmlspecialchars($proyecto['imgportda']); ?>" alt="Imagen del proyecto">
+                        <img class="img-responsive img-centered" src="<?= htmlspecialchars($proyecto['img']); ?>" alt="Imagen del proyecto">
                         <p><?= htmlspecialchars($proyecto['intro']); ?></p>
                         <p><strong>Más información:</strong><a id="modal-url" href="<?= htmlspecialchars($proyecto['url']); ?>" target="_blank">Ver proyecto</a></p>
                         <ul class="list-inline">
