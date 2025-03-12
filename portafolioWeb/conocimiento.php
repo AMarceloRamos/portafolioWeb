@@ -1,4 +1,6 @@
+
 <section id="pricing">
+        <div class="container">
         <div class="container-fluid wrapper">
             <div class="row">
                 <div class="col-lg-12 text-left">
@@ -54,5 +56,6 @@
                     <a href="" class="btn btn-send">Sign Up</a>
                 </div>
             </div>
+        </div>
         </div>
     </section>
