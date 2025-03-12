@@ -5,21 +5,6 @@
                 <a class="footer-logo" href="#header">
                     <img style="width:60px;"class="img-responsive" src="img/logo2.png" alt="logo-footer" >
                 </a>
-         
-            </div>
-            <div class="col-sm-6 col-md-12 social-icons-footer">
-                <ul class="list-inline social-buttons">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-google"></i></a>
-                    </li>
-                </ul>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 copyright-bottom">
                 <span class="copyright">Copyright &copy; AR <?php echo date("Y") ?> Created By <a href="http://templatestock" target="_blank">Adrian Ramos</a> </span>
