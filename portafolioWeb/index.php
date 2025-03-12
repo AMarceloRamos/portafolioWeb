@@ -1,11 +1,6 @@
 <?php  
-
 include 'template/header.php';
-
-
 ?>
-
-
 <!-- Slider -->
 <section id="slider">
 
@@ -22,13 +17,7 @@ include 'template/header.php';
         <source src="1x/Recursos.mp4" type="video/mp4">
         Tu navegador no soporta el video.
     </video>
-
-
 </section>
-
-
-
-
 <!-- Services Section -->
 
 <!-- Team About -->
