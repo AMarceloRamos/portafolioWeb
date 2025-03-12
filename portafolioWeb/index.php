@@ -32,7 +32,7 @@ include 'template/header.php';
 ?>
 <!-- Pricing Section -->
 <?php
-        // include 'precio.php';
+         include 'conocimiento.php';
     ?>
 <!-- Client Section -->
 <?php 
