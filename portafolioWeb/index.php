@@ -40,9 +40,7 @@ include 'template/header.php';
 
 <?php 
         include 'portafolioProyectos.php';
-     ?>
-
-
+?>
 <!-- Pricing Section -->
 <?php
         // include 'precio.php';
@@ -60,9 +58,6 @@ include 'template/header.php';
      include 'contacto.php';
 ?>
 <!-- Footer -->
-
-
 <?php 
-    
     include 'template/footer.php';
 ?>
