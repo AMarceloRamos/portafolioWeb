@@ -46,8 +46,8 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 <?php 
                     $categoria = strtolower(str_replace(' ', '', htmlspecialchars($proyecto['categoria']))); 
                 ?>
-            <div class="container">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 work-grid <?=$categoria?>">
+            
+                <div class="col-xs-9 col-sm-6 col-md-6 col-lg-3 work-grid <?=$categoria?>">
                     <div class="portfolio-item">
                         <div class="hover-bg">
                             <a href="#portfolioModal<?= $proyecto['id'];?>" class="portfolio-link" data-toggle="modal" data-id="<?= $proyecto['id']; ?>">
@@ -62,7 +62,6 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                 </div>
-             </div>  
             <?php } ?>
         </div>
     </div>
