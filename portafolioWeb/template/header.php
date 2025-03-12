@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<!--
-	xBe by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
-
 <html lang="en">
 
 <head>
@@ -29,14 +21,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-
-
     <!-- Custom Animations -->
-
     <link rel="stylesheet" href="css/animate.css">
-
 </head>
-
 <body>
     <!-- HEADER -->
     <header id="header">
@@ -67,12 +54,7 @@
                         <li>
                             <a class="page-scroll" href="#portfolio">Portafolio</a>
                         </li>
-                        <!-- <li>
-                            <a class="page-scroll" href="#pricing">Emprende con nosotros</a>
-                        </li> -->
-                        <!-- <li>
-                            <a class="page-scroll" href="#testimonials">Noticias</a>
-                        </li> -->
+                      
                         <li>
                             <a class="page-scroll" href="#contact">Contáctame</a>
                         </li>
