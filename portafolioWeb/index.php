@@ -10,7 +10,7 @@ include 'template/header.php';
                                     <h2 class="intro-heading animated bounceInRight">Developer</h2>
                                     <p class="intro-paragraph animated bounceInRight">Bienvenido a mi sitio web dedicado al desarrollo web y al diseño</p>
                                 </div>
-                                <a href="#services" class="page-scroll btn btn-xl slider-button animated bounceInUp">Acerca de mi</a>  
+                                <a href="#about" class="page-scroll btn btn-xl slider-button animated bounceInUp">Acerca de mi</a>  
     </div>
     <!-- Video de fondo -->
     <video class="video-background" autoplay loop muted>
