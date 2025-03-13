@@ -12,7 +12,7 @@
                 <div class="pricing text-center">
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">Lenguajes</h3>
-                        <h4 class="price">$39</h4>
+                
                     </div>
                     <ul>
                         <li>Javascripts</li>
@@ -27,7 +27,7 @@
                 <div class="pricing text-center">
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">Herramientas</h3>
-                        <h4 class="price">$89</h4>
+                        
                     </div>
                     <ul>
                         <li>Git</li>
@@ -43,7 +43,7 @@
                 <div class="pricing text-center">
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">IDES/FrameWorks</h3>
-                        <h4 class="price">$119</h4>
+                        
                     </div>
                     <ul>
                         <li>Apache Netbeans</li>
