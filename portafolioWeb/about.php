@@ -21,12 +21,9 @@
                             <p class="team-text-short">Egresado de Técnico en Análisis y Programación Computacional, con certificaciones en Desarrollo Web y Técnico en Armado y Configuración de Computadoras.</p>
                             <p class="team-text-short">Posee más de cuatro años de experiencia desarrollando sitios web y aplicaciones móviles, desde plataformas para marcas personales hasta soluciones de comercio electrónico. </p>
                             <ul class="list-inline social-buttons">
-                                <!-- <li><a href="#"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a>
-                                </li> -->
                                 <li><a href="https://www.linkedin.com/in/adri%C3%A1n-ramos-b3869447/" target="t_bank"><i class="fab fa-linkedin"></i></a>
-                                <li><a href="https://github.com/AMarceloRamos" target="t_bank"><i class="fab fa-github"></i></a></li> 
+                                <li><a href="https://github.com/AMarceloRamos" target="t_bank"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@adrianramosinfoma?_t=ZM-8udgqbDWgDv&_r=1https://github.com/AMarceloRamos" target="t_bank"><i class="fab fa-tiktok"></i></a></li> 
                                 <h3 class="section-subheading" > <a href="documents/curriculum.pdf" download="adrian_ramos_cv.pdfclass="page-scroll btn btn-primary  btn-xl slider-button animated bounceInUp">↓ Descargar <span style="font-size:12px"></span>Hoja de vida</a>  
                             </ul>
                         </div>
