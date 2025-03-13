@@ -8,7 +8,7 @@ if (!$db) {
     die("Error de conexión a la base de datos.");
 }
 
-$sql = "SELECT id, titulo, intro, categoria, imgportda, url, img FROM proyectos";
+$sql = "SELECT id, titulo, intro, categoria, imgportda, url, img , git FROM proyectos";
 
 // Ejecuta la consulta
 $resultado = $db->query($sql);
@@ -84,7 +84,8 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         <p class="item-intro text-muted"><?= htmlspecialchars($proyecto['intro']); ?></p>
                         <img class="img-responsive img-centered" src="<?= htmlspecialchars($proyecto['img']); ?>" alt="Imagen del proyecto">
                         <p><?= htmlspecialchars($proyecto['intro']); ?></p>
-                        <p><strong>Más información:</strong><a id="modal-url" href="<?= htmlspecialchars($proyecto['url']); ?>" target="_blank">Ver proyecto</a></p>
+                        <p><strong>Sitio:</strong><a id="modal-url" href="<?= htmlspecialchars($proyecto['url']); ?>" target="_blank">Ver proyecto</a></p>
+                        <p><strong>Github:</strong><a id="modal-url" href="<?= htmlspecialchars($proyecto['git']); ?>" target="_blank">Ver proyecto</a></p>
                         <ul class="list-inline">
                             <li><strong>Categoría:</strong> <?= htmlspecialchars($proyecto['categoria']); ?></li>
                         </ul>
