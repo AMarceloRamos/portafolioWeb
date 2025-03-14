@@ -1,4 +1,8 @@
 <?php
+ob_start(); // Iniciar buffer de salida
+require_once 'include/config/database.php';
+?>
+
 require_once 'include/config/database.php';
 
 //$db = conectarDB();
