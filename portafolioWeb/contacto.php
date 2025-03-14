@@ -83,6 +83,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-lg-6 text-center">
                 <h2 class="section-heading">Contáctame </h2>
                 <h3 class="section-subheading">llenar el formulario con todos los campos requeridos.</h3>
+                     <div>
+                            <?php   
+                                    // mostrar los resultados
+                                    if(isset($_GET['success']) && $_GET['success'] == 1){
+                                  
+                                    // Limpiamos los valores
+
+                                    $nombre = '';
+                                    $email = '';
+                                    $telefono = '';
+                                    $mensaje = '';                               
+                                    }
+                                    if(!empty($errores)){
+                                         foreach($errores as $error){
+                                            echo "<p style='color:red;'>{$error}</p>";
+                                             }
+                                        }                                     
+                                    ?>
+                                    </div>
             </div>
             <div class="col-md-6">
                 <div class="company-address col-sm-6 col-md-6">
@@ -135,25 +154,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                                    <!-- <div id="success"></div> -->
                             <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
-                            <div>
-                            <?php   
-                                    // mostrar los resultados
-                                    if(isset($_GET['success']) && $_GET['success'] == 1){
-                                  
-                                    // Limpiamos los valores
-
-                                    $nombre = '';
-                                    $email = '';
-                                    $telefono = '';
-                                    $mensaje = '';                               
-                                    }
-                                    if(!empty($errores)){
-                                         foreach($errores as $error){
-                                            echo "<p style='color:red;'>{$error}</p>";
-                                             }
-                                        }                                     
-                                    ?>
-                                    </div>
                         </div>
                         <div class="col-md-6">
                            <div class="map-canvas">
