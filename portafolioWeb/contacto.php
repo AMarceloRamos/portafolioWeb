@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <?php   
                                     // mostrar los resultados
                                     if(isset($_GET['success']) && $_GET['success'] == 1){
-                                  
+                                    echo "<p style='color:green;font-size:24px;'>¡Mensaje enviado con éxito!</p>";
                                     // Limpiamos los valores
 
                                     $nombre = '';
@@ -99,9 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                          foreach($errores as $error){
                                             echo "<p style='color:red;font-size:24px;'>{$error}</p>";
                                         } 
-                                      } else{
-                                             echo "<p style='color:green;font-size:24px'>El mensaje a sido enviado con exito</p>"
                                     }
+                                        
                                     ?>
             </div>
             <div class="col-md-6">
