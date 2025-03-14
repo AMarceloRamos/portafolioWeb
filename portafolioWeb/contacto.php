@@ -101,9 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         } 
                                       } else{
                                              echo "<p style='color:green;font-size:24px'>El mensaje a sido enviado con exito</p>"
-                                             }
+                                    }
                                     ?>
-                                    </div>
             </div>
             <div class="col-md-6">
                 <div class="company-address col-sm-6 col-md-6">
