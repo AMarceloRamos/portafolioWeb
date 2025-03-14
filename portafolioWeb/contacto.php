@@ -177,3 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
   
 </section>
+                    <?php
+ob_end_flush(); // Enviar el contenido al navegador
+?>
+
