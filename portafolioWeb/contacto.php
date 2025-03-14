@@ -98,10 +98,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     if(!empty($errores)){
                                          foreach($errores as $error){
                                             echo "<p style='color:red;font-size:24px;'>{$error}</p>";
-                                             } else{
+                                        } 
+                                      } else{
                                              echo "<p style='color:green;font-size:24px'>El mensaje a sido enviado con exito</p>"
                                              }
-                                        } 
                                     ?>
                                     </div>
             </div>
