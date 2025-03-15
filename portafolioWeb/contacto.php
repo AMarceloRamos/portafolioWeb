@@ -178,7 +178,4 @@ ob_end_flush();
     <br>
   
 </section>
-                    <?php
-ob_end_flush(); // Enviar el contenido al navegador
-?>
 
