@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($resultado) {
             // Redirigir usando PRG para evitar reenvíos
             header("Location: ".$_SERVER['PHP_SELF']."#contact");
-            exit;
+            die();
         } else {
             $errores[] = "Error al guardar el mensaje en la base de datos.";
         }
