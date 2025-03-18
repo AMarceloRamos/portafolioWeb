@@ -81,7 +81,7 @@
 <!-- Google Map -->
 <script src="http://maps.googleapis.com/maps/api/js?extension=.js&output=embed"></script>
 <!-- Footer Reveal scirt -->
-<script src="js/footer-reveal.js"></script>
+<!-- <script src="js/footer-reveal.js"></script>-->
 
 </body>
 
