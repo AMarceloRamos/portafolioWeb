@@ -1,4 +1,3 @@
-  <!-- Footer -->
   <footer>
         <div class="container-fluid wrapper">
             <div class="col-lg-12 footer-info">
