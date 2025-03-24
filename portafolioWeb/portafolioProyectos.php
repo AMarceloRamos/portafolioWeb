@@ -68,6 +68,9 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 </section>
 
 <!-- Modales -->
+<div class="scroll-up">
+    <a href="#header" class="page-scroll"><i class="fa fa-angle-up"></i></a>
+</div>
 <?php foreach ($proyectos as $proyecto) { ?>
 <div class="portfolio-modal modal fade" id="portfolioModal<?= $proyecto['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
