@@ -89,8 +89,8 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         <ul class="list-inline">
                             <li><strong>Categoría:</strong> <?= htmlspecialchars($proyecto['categoria']); ?></li>
                         </ul>
-                        <button type="button" class="btn btn-xl" data-dismiss="modal">
-                            <i class="fa fa-times"></i> Cerrar Proyecto
+                        <button type="button" class="btn btn-xl" data-dismiss="modal" id="modal">
+                            <i class="fa fa-times" ></i> Cerrar Proyecto
                         </button>
                     </div>
                 </div>
@@ -98,8 +98,8 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <!-- Scroll-up -->
-<div class="scroll-up">
-    <a href="#footer" class="page-scroll"><i class="fa fa-angle-up"></i></a>
+<div class="scroll-down">
+    <a href="#modal" class="page-scroll"><i class="fa fa-angle-up"></i></a>
 </div>
 
 </div>
