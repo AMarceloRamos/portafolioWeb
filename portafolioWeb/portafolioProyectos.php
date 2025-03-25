@@ -98,8 +98,8 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <!-- Scroll-up -->
-<div class="scroll-down">
-    <a href="#modal" class="page-scroll"><i class="fa fa-angle-up"></i></a>
+<div class="scroll-up">
+    <a href="#modal" class="page-scroll"><i class="fa fa-angle-down"></i></a>
 </div>
 
 </div>
