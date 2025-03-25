@@ -1,5 +1,6 @@
 <?php
 require_once 'include/config/database.php'; // Asegúrate de que este archivo no tenga espacios en blanco antes de <?php
+ob_start(); // Iniciar el buffer de salida
 
 $nombre = '';
 $email = '';
@@ -59,6 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+
+    ob_end_flush();
 ?>
 
 <section id="contact">
