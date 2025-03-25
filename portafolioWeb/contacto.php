@@ -1,5 +1,5 @@
 <?php
-require_once 'include/config/database.php'; // Asegúrate de que este archivo no tenga espacios en blanco antes de <?php
+require_once 'include/config/database.php'
 ob_start(); // Iniciar el buffer de salida
 
 $nombre = '';
