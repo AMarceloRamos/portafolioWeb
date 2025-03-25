@@ -99,11 +99,11 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <!-- Scroll-up -->
 <div class="scroll-up">
-    <a href="#modal" class="page-scroll"><i class="fa fa-angle-down"></i></a>
+    <a href="#footer" class="page-scroll"><i class="fa fa-angle-down"></i></a>
 </div>
-
 </div>
 <?php } ?>
+<footer id="footer"></footer>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
