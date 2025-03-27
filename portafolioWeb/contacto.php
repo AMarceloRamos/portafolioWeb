@@ -1,6 +1,6 @@
 <?php
 require_once 'include/config/database.php'
-ob_start(); // Iniciar el buffer de salida
+//ob_start(); 
 
 $nombre = '';
 $email = '';
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-    ob_end_flush();
+   // ob_end_flush();
 ?>
 
 <section id="contact">
