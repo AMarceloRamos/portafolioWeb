@@ -1,5 +1,5 @@
 <?php
-require_once 'include/config/database.php'
+require_once 'include/config/database.php';
 //ob_start(); 
 
 $nombre = '';
