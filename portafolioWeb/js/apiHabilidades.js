@@ -6,7 +6,7 @@
             { label: 'Typescript', value: 10 },
         ];
 
-        function renderChart(data) {
+        function renderChart() {
             const chart = document.getElementById('chartLenguajes');
             chart.innerHTML = '';
 
