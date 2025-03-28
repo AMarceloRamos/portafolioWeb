@@ -1,4 +1,4 @@
-   const dataLenguaje = [
+   const data = [
             { label: 'Javascript', value: 40},
             { label: 'PHP', value: 50},
             { label: 'Java', value: 30 },
@@ -6,7 +6,7 @@
             { label: 'Typescript', value: 10 },
         ];
 
-        function renderChart(dataLenguaje) {
+        function renderChart(data) {
             const chart = document.getElementById('chartLenguajes');
             chart.innerHTML = '';
 
@@ -29,4 +29,4 @@
             });
         }
 
-        renderChart(dataLenguaje);
+        renderChart(data);
