@@ -14,6 +14,7 @@
                         <h3 class="pricing-title">Lenguajes</h3>
                     </div>
                         <div class="chart-container" id="chartLenguajes"></div>
+                        <div class="tooltip" id="tooltip"></div>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -22,6 +23,7 @@
                         <h3 class="pricing-title">Herramientas</h3>
                     </div>
                         <div class="chart-container" id="chartHerramientas"></div>
+                        <div class="tooltip" id="tooltip"></div>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -30,6 +32,7 @@
                         <h3 class="pricing-title">IDES/FrameWorks</h3>
                     </div>
                         <div class="chart-container" id="chartFrameworks"></div>
+                        <div class="tooltip" id="tooltip"></div>
                 </div>
             </div>
         </div>
