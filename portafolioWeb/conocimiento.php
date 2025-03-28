@@ -13,13 +13,6 @@
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">Lenguajes</h3>
                     </div>
-                    <ul>
-                        <li>Javascripts</li>
-                        <li>Php</li>
-                        <li>Java</li>
-                        <li>Ruby</li>
-                    </ul>
-                     <h2>lenguajes</h2>
                         <div class="chart-container" id="chartLenguajes"></div>
                 </div>
             </div>
@@ -28,14 +21,6 @@
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">Herramientas</h3>
                     </div>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Bootstrap</li>
-                        <li>Postman</li>
-                        <li>Dbeaver</li>
-                    </ul>
-                    <h2>herramientas</h2>
                         <div class="chart-container" id="chartHerramientas"></div>
                 </div>
             </div>
@@ -44,14 +29,6 @@
                     <div class="pricing-top-box">
                         <h3 class="pricing-title">IDES/FrameWorks</h3>
                     </div>
-                    <ul>
-                        <li>Angular</li>
-                        <li>React</li>
-                        <li>Apache Netbeans</li>
-                        <li>Android Studio</li>
-                        <li>ruby and rails</li>                   
-                    </ul>
-                   <h2>IDES/Frameworks</h2>
                         <div class="chart-container" id="chartFrameworks"></div>
                 </div>
             </div>
