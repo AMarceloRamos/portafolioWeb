@@ -103,7 +103,6 @@ $proyectos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 </div>
 </div>
 <?php } ?>
-<footer id="footer"></footer>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
