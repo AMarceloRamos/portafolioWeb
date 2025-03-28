@@ -20,7 +20,7 @@
                         <li>Ruby</li>
                     </ul>
                      <h2>lenguajes</h2>
-                        <div class="chart-container" id="chartlenguajes"></div>
+                        <div class="chart-container" id="chartLenguajes"></div>
                 </div>
             </div>
             <div class="col-sm-4">
