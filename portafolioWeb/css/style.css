@@ -1481,6 +1481,33 @@ body {
         font-size: 40px;
     }
 }
+   .chart-container { 
+            width: 80%; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: white; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .bar { 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+            margin-bottom: 10px; 
+            height: 30px; 
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .bar-fill { 
+            height: 100%; 
+            background-color: #4CAF50; 
+            text-align: right; 
+            padding-right: 10px; 
+            color: white;
+            border-radius: 5px;
+        }
+        .label { margin-right: 10px; width: 80px; }
 
 
 /* 10.0  CLIENTS ===========================================================================*/
