@@ -1495,7 +1495,7 @@ body {
             align-items: center; 
             margin-bottom: 10px; 
             height: 30px; 
-            background-color: #ddd;
+            background-color: #FEFEFE;
             border-radius: 5px;
             overflow: hidden;
         }
@@ -1507,7 +1507,7 @@ body {
             color: white;
             border-radius: 5px;
         }
-        .label { margin-right: 10px; width: 80px;color:black;}
+        .label { margin-right: 10px; width: 80px;}
 
 
 /* 10.0  CLIENTS ===========================================================================*/
