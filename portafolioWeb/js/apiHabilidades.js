@@ -35,15 +35,32 @@ function renderChart(data, id) {
         label.className = 'label';
         label.textContent = item.label;
 
-        const barFill = document.createElement('div');
-        barFill.className = 'bar-fill';
-        barFill.style.width = `${item.value}%`;
-        barFill.textContent = `${item.value}%`;
+       const barFill = document.createElement('div');
+                barFill.className = 'bar-fill';
+                barFill.style.width = '0%';
+                barFill.textContent = `${item.value}%`;
 
-        bar.appendChild(label);
-        bar.appendChild(barFill);
-        chart.appendChild(bar);
-    });
+                // Animación de entrada
+                setTimeout(() => {
+                    barFill.style.width = `${item.value}%`;
+                }, 100);
+
+                // Evento para mostrar el tooltip
+                barFill.addEventListener('mouseover', (e) => {
+                    tooltip.style.opacity = 1;
+                    tooltip.textContent = `${item.label}: ${item.value}%`;
+                    tooltip.style.top = `${e.clientY - 30}px`;
+                    tooltip.style.left = `${e.clientX + 10}px`;
+                });
+
+                barFill.addEventListener('mouseout', () => {
+                    tooltip.style.opacity = 0;
+                });
+
+                bar.appendChild(label);
+                bar.appendChild(barFill);
+                chart.appendChild(bar);
+            });
 }
 
 renderChart(dataLenguajes, 'chartLenguajes');
