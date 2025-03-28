@@ -1,6 +1,6 @@
 const dataLenguajes = [
     { label: 'JavaScript', value: 40 },
-    { label: 'PHP', value: 50 },
+    { label: 'PHP', value: 40},
     { label: 'Java', value: 30 },
     { label: 'Ruby', value: 30 },
     { label: 'TypeScript', value: 10 },
