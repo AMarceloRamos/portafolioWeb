@@ -3,7 +3,7 @@ const dataLenguajes = [
     { label: 'PHP', value: 40},
     { label: 'Java', value: 30 },
     { label: 'Ruby', value: 30 },
-    { label: 'TypeScript', value: 10 },
+    { label: 'TypeScript', value: 20 },
 ];
 
 const dataHerramientas = [
