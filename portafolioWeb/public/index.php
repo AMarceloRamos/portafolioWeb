@@ -2,6 +2,7 @@
 
 require '../include/config/database.php';
 
+
 $db = conectarDB();
 
 $nombre = '';
@@ -111,7 +112,7 @@ include '../template/header.php';
 <!-- Portfolio Section -->
 
 <?php 
-        include '../portafolio.php';
+        include '../portafolioProyectos.php';
      ?>
 
 

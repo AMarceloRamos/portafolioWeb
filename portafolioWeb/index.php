@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
      if(empty($errores)){
 
-        $query = "INSERT INTO form_contacto(nombre, email, telefono, mensaje) VALUES('$nombre','$email', '$telefono', '$mensaje' )";
+        $query = "INSERT INTO formulario_contacto(nombre, email, telefono, mensaje) VALUES('$nombre','$email', '$telefono', '$mensaje' )";
 
        $resultado = mysqli_query($db, $query);
        
@@ -87,7 +87,7 @@ include 'template/header.php';
                                     <h2 class="intro-heading animated bounceInRight">Developer</h2>
                                     <p class="intro-paragraph animated bounceInRight">Bievenido a  mi sitio web dedicado al desarrollo web y al diseño</p>
                                 </div>
-                                <a href="#services" class="page-scroll btn btn-xl slider-button animated bounceInUp">Acerca de mi</a>  
+                                <a href="#about" class="page-scroll btn btn-xl slider-button animated bounceInUp">Acerca de mi</a>  
     </div>
     <!-- Video de fondo -->
     <video class="video-background" autoplay loop muted>
@@ -111,7 +111,7 @@ include 'template/header.php';
 <!-- Portfolio Section -->
 
 <?php 
-        include 'portafolio.php';
+        include 'portafolioProyectos.php';
      ?>
 
 
