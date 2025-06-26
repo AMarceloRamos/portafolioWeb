@@ -1,0 +1,93 @@
+/* Estilo general del slider */
+#slider {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Ajusta la altura al 100% del viewport */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video ocupe todo el espacio sin distorsionarse */
+    z-index: -1; /* Envía el video al fondo */
+}
+
+.carousel-caption {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté sobre el video */
+    color: #fff;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 100;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h2 {
+    font-size: 81px;
+    font-weight: 600;
+    text-transform: lowercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.slider-button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    padding: 8px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.carousel-inner img.slider-image {
+    display: none; /* Ocultamos cualquier imagen que no sea el video */
+}
+
+.myCarousel-one-left,
+.myCarousel-one-right {
+    color: #000;
+    font-size: 32px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 32px;
+    z-index: 999;
+    transition: 300ms;
+}
+
+.myCarousel-one-left {
+    left: -100px;
+}
+
+.myCarousel-one-right {
+    right: -100px;
+}
+
+#myCarousel-one:hover .myCarousel-one-left {
+    left: 0;
+}
+
+#myCarousel-one:hover .myCarousel-one-right {
+    right: 0;
+}
